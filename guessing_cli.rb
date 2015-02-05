@@ -2,6 +2,10 @@ def random_number_generator
   rand(6)
 end
 
+def exit_guessing_game
+  puts "Goodbye!"
+end
+
 def run_guessing_game
   input = ""
   while input
@@ -11,6 +15,9 @@ def run_guessing_game
     case input.chomp
     when random_number.to_s
       puts "You guessed the correct number!"
+    when 'exit'
+      exit_guessing_game
+      break
     else
       puts "The computer guessed #{random_number}."
     end
