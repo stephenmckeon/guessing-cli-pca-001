@@ -3,7 +3,7 @@ def run_guessing_game
   while input
     puts "Guess a number between 1 and 6."
     input = gets.downcase.chomp
-    random_number = rand(6).to_s
+    random_number = rand(1..6).to_s
     case input.chomp
     when random_number
       puts "You guessed the correct number!"
